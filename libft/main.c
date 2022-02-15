@@ -13,10 +13,10 @@
 #include "libft.h"
 #include <stdio.h>
 
-int     main(void)
+int	main(void)
 {
-    char    *str = "testing";
+	char	*str = "testing";
 
-    printf("%d\n", ft_strlen(str));
-    return (0);
+	printf("%d\n", ft_strlen(str));
+	return (0);
 }
