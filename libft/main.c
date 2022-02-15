@@ -1,28 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pnimwata <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/15 01:46:59 by pnimwata          #+#    #+#             */
-/*   Updated: 2022/02/15 01:46:59 by pnimwata         ###   ########.fr       */
+/*   Created: 2022/02/15 11:57:41 by pnimwata          #+#    #+#             */
+/*   Updated: 2022/02/15 11:57:41 by pnimwata         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
-
-size_t  ft_strlen(char const *s)    
+int     main(void)
 {
-    int count;
+    char    *str = "testing";
 
-    count = 0;
-    while (*s != '\0')
-    {
-        count++;
-        s++;
-    }
-    return (count);
+    printf("%d\n", ft_strlen(str));
+    return (0);
 }
-
