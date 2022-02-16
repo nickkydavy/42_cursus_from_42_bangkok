@@ -18,5 +18,9 @@ int	main(void)
 	char	*str = "testing";
 
 	printf("%d\n", ft_strlen(str));
+	printf("%d\n", ft_isalpha(str[0]));
+	printf("%d\n", ft_isascii(str[0]));
+	printf("%d\n", ft_isdigit(str[0]));
+	printf("%d\n", ft_isprint(str[0]));
 	return (0);
 }

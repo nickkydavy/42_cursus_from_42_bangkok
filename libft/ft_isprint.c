@@ -1,26 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pnimwata <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/15 01:46:59 by pnimwata          #+#    #+#             */
-/*   Updated: 2022/02/15 01:46:59 by pnimwata         ###   ########.fr       */
+/*   Created: 2022/02/16 11:03:04 by pnimwata          #+#    #+#             */
+/*   Updated: 2022/02/16 11:03:04 by pnimwata         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-size_t	ft_strlen(char const *s)
+int	ft_isprint(int c)
 {
-	int	count;
-
-	count = 0;
-	while (*s != '\0')
-	{
-		count++;
-		s++;
-	}
-	return (count);
+	return (c >= 32 && c <= 126);
 }
