@@ -11,32 +11,39 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-
-int	is_space(char const s)
-{
-	if (s == ' ' || s == '\t')
-	return (1);
-}
+#include <stdio.h>
 
 int	ft_atoi(char const *str)
 {
-	size_t	nbr;
-	size_t	i;
-	int	p_or_n;
+	unsigned	int	nbr;
+	size_t			i;
+	// size_t			min_int;
+	// size_t			max_int;
+	int				p_or_n;
 
-	if (str == "-2147483648")
-		return (-2147483648);
 	i = 0;
+	// min_int = MIN_INT;
+	// max_int = MAX_INT;
 	p_or_n = 1;
+	nbr = 0;
 	while (*(str + i) == ' ')
 		i++;
-	if(*(str + i) == '-')
+	if (*(str + i) == '-')
+	{
 		p_or_n *= -1;
-	i++;
+		i++;
+	}
+	else if (*(str + i) == '+')
+		i++;
 	while (ft_isdigit(*(str + i)))
 	{
 		nbr = nbr * 10 + (*(str + i) - '0');
+		printf("%d\n", (int)nbr);
 		i++;
 	}
+	// if (p_or_n > 0 && nbr > max_int)
+	// 	nbr = min_int + (nbr - max_int);
+	// else if (p_or_n < 0 && nbr > min_int)
+	// 	nbr = max_int - (nbr - min_int);
 	return (p_or_n * (int)nbr);
 }
