@@ -3,30 +3,27 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pnimwata <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: pnimwata <pnimwata@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/15 11:57:41 by pnimwata          #+#    #+#             */
-/*   Updated: 2022/02/15 11:57:41 by pnimwata         ###   ########.fr       */
+/*   Created: 2022/02/16 19:04:29 by pnimwata          #+#    #+#             */
+/*   Updated: 2022/02/16 19:04:29 by pnimwata         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <string.h>
 #include <stdio.h>
 
 int	main(void)
 {
-	char	str1[20] = "testing";
-	char	str2[20] = "tssting1";
-	void	*str_void_test1;
+	char	str1[20] = {-128, 0, 127, 0};
+	char	str2[20] = {0, 0, 127, 0};
+	// void	*str_void_test1;
+	// void	*str_void_test2;
 
-	str_void_test1 = (void *)str1;
-	printf("%ld\n", ft_strlen(str1));
-	printf("%d\n", ft_isalpha(str1[0]));
-	printf("%d\n", ft_isascii(str1[0]));
-	printf("%d\n", ft_isdigit(str1[0]));
-	printf("%d\n", ft_isprint(str1[0]));
-	printf("%d\n", ft_strncmp(str1, str2, 4));
-	printf("%s\n", (char *)ft_memset(str_void_test1, '0', 2));
-	printf("%s\n", str1);
+	// str_void_test1 = (void *)str1;
+	// str_void_test2 = (void *)str2;
+	printf("%d\n", (int)ft_memcmp(str1, str2, 5));
+	printf("%d\n", (int)memcmp(str1, str2, 5));
 	return (0);
 }
