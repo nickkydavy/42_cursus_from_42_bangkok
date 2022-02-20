@@ -13,6 +13,8 @@
 #ifndef LIBFT_H
 # define LIBFT_H
 # include <stdlib.h>
+# define MIN_INT -2147483648
+# define MAX_INT 2147483647
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
@@ -23,7 +25,7 @@ int		ft_toupper(int c);
 int		ft_tolower(int c);
 int		ft_strncmp(char const*s1, char const *s2, size_t n);
 int		ft_memcmp(void const *s1, void const *s2, size_t n);
-int		ft_atoi(char const *nptr);
+int		ft_atoi(char const *str);
 char	*ft_strchr(char const *s, int c);
 char	*ft_strrchr(char const *s, int c);
 char	*ft_strchr(char const *s, int c);
@@ -39,7 +41,7 @@ char	*ft_strdup(char const *s);
 void	ft_bzero(void *s, size_t n);
 void	*ft_memcpy(void *dest, void const *src, size_t n);
 void	*ft_memmove(void *dest, void const *src, size_t n);
-void	*ft_calloc(size_t nmemb, size_t size);
+void	*ft_calloc(size_t count, size_t size);
 void	*ft_striteri(char *s, void (*f)(unsigned int, char *));
 void	ft_purchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
