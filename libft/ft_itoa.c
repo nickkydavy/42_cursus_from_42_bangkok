@@ -12,43 +12,32 @@
 
 #include "libft.h"
 
-int	ft_log10(int n)
-{
-	int	count;
-
-	count = 0;
-	if (n / 10 <= 1)
-		return (count);
-	while (n / (10 * count) > 1)
-		count++;
-	return (count);
-}
-
 char	*ft_itoa(int n){
 	char	*new_s;
-	size_t	size;
-	size_t	abs_n;
-	size_t	i;
-	
-	size = ft_log10(n);
-	if (n < 0)
+
+	new_s = (char *)ft_calloc(10, sizeof (char));
+	if (!new_s)
+		return (0);
+	if(n >= 0 && new_s)
 	{
-		size++;
-		abs_n = n * (-1);
+		*(--new_s) = '0' + (n % 10);
+		n /= 10;
+		while (n != 0)
+		{
+			*(--new_s) = '0' + (n % 10);
+			n /= 10;
+		}
 	}
-	new_s = (char *)ft_calloc(size + 1, sizeof (char));
-	if (n < 0)
-		new_s[0] = '-';
-	i = 0;
-	while (size > 0)
+	else if (new_s)
 	{
-		new_s[i] = abs_n / (10 * size) + '0';
-		abs_n -= abs_n / (10 * size);
-		size--;
-		i++;
+		*(--new_s) = '0' - (n % 10);
+		n /= 10;
+		while (n != 0)
+		{
+			*(--new_s) = '0' - (n % 10);
+			n /= 10;
+		}
+		*(--new_s) = '-';
 	}
-	if (size == 0)
-		new_s[i] = abs_n + '0';
-	new_s[i + 1] = '\0';
 	return (new_s);
 }
