@@ -6,7 +6,7 @@
 /*   By: pnimwata <pnimwata@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/16 19:04:14 by pnimwata          #+#    #+#             */
-/*   Updated: 2022/02/16 19:04:14 by pnimwata         ###   ########.fr       */
+/*   Updated: 2022/02/24 15:02:30 by pnimwata         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ void	*ft_memcpy(void *dest, void const *src, size_t n);
 void	*ft_memmove(void *dest, void const *src, size_t n);
 void	*ft_calloc(size_t count, size_t size);
 void	*ft_striteri(char *s, void (*f)(unsigned int, char *));
-void	ft_purchar_fd(char c, int fd);
+void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
