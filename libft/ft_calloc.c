@@ -21,7 +21,7 @@ void	*ft_calloc(size_t count, size_t size)
 	i = 0;
 	while (i < count)
 	{
-		*(mem + i) = (void *)0;
+		ft_memset(mem, '\0', size);
 		i++;
 	}
 	return (mem);
