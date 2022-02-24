@@ -13,8 +13,6 @@
 #ifndef LIBFT_H
 # define LIBFT_H
 # include <stdlib.h>
-# define MIN_INT -2147483648
-# define MAX_INT 2147483647
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
