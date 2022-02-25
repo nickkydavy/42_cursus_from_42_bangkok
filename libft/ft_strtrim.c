@@ -6,7 +6,7 @@
 /*   By: pnimwata <pnimwata@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/20 12:36:59 by pnimwata          #+#    #+#             */
-/*   Updated: 2022/02/20 12:36:59 by pnimwata         ###   ########.fr       */
+/*   Updated: 2022/02/25 13:03:19 by pnimwata         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,7 +78,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	k = 0;
 	while (*(s1 + i) != '\0')
 	{
-		if (i == arr_i_set[j])
+		if (i == (size_t)arr_i_set[j])
 		{
 			i += ft_strlen(set);
 			j++;

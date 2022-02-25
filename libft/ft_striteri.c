@@ -6,7 +6,7 @@
 /*   By: pnimwata <pnimwata@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/24 14:23:23 by pnimwata          #+#    #+#             */
-/*   Updated: 2022/02/24 14:23:23 by pnimwata         ###   ########.fr       */
+/*   Updated: 2022/02/25 13:27:36 by pnimwata         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 	{
 		while (i < ft_strlen(s))
 		{
-			(*f)(i, *(s + i));
+			(*f)(i, (s + i));
 			i++;
 		}
 	}
