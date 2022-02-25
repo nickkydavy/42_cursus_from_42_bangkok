@@ -6,7 +6,7 @@
 /*   By: pnimwata <pnimwata@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/18 13:44:03 by pnimwata          #+#    #+#             */
-/*   Updated: 2022/02/18 13:44:03 by pnimwata         ###   ########.fr       */
+/*   Updated: 2022/02/25 13:01:34 by pnimwata         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ char	*ft_strrchr(char const *s, int c)
 	i = ft_strlen(s);
 	while (i >= 0)
 	{
-		if (*(s + i) == c)
-			return (s + i);
+		if (*(s + i) == (char)c)
+			return ((char *)(s + i));
 		i--;
 	}
 	return (0);
