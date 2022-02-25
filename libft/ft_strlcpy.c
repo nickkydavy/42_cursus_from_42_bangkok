@@ -6,7 +6,7 @@
 /*   By: pnimwata <pnimwata@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 16:20:43 by pnimwata          #+#    #+#             */
-/*   Updated: 2022/02/17 16:20:43 by pnimwata         ###   ########.fr       */
+/*   Updated: 2022/02/25 16:19:26 by pnimwata         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,26 @@
 
 size_t	ft_strlcpy(char *dest, char const *src, size_t n)
 {
-	size_t	i;
-	size_t	max;
+	size_t	len;
 
-	i = -1;
-	if (n > sizeof (*dest))
-		max = sizeof (0);
-	while (*(dest + i) != '\0' && *(src + i) != '\0' && i < n - 1)
+	len = 0;
+	if (n == 0)
+		return (ft_strlen(src));
+	while (len < n - 1 && *src)
 	{
-		*(dest + i) = *(src + i);
-		i++;
+		*dest = *src;
+		dest++;
+		src++;
+		len++;
 	}
-	return (sizeof (*dest));
+	if (*src)
+	{
+		while (*src)
+		{
+			len++;
+			src++;
+		}
+	}
+	*dest = '\0';
+	return (len);
 }

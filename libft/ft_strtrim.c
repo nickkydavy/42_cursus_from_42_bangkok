@@ -6,90 +6,48 @@
 /*   By: pnimwata <pnimwata@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/20 12:36:59 by pnimwata          #+#    #+#             */
-/*   Updated: 2022/02/25 13:03:19 by pnimwata         ###   ########.fr       */
+/*   Updated: 2022/02/25 21:40:03 by pnimwata         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	count_set_in_arr(char const *s1, char const *set)
+size_t	count_trimmed_str(char const *s, char const *set)
 {
-	size_t	i;
-	size_t	j;
-	int		count;
+	size_t	count;
 
-	i = 0;
-	j = 0;
 	count = 0;
-	while (*(s1 + i) != '\0')
+	while (*s != 0)
 	{
-		while (*(s1 + i + j) == *(set + j))
-		{
-			if (j == ft_strlen(set))
-				count++;
-			j++;
-		}
-		j = 0;
-		i++;
+		if (ft_strchr(set, *s) == 0)
+			count++;
+		s++;
 	}
 	return (count);
 }
-
-int	*arr_i_in_set(char const *s1, char const *set)
-{
-	int		*arr;
-	int		size_i_of_set;
-	size_t	i;
-	size_t	j;
-	size_t	k;
-
-	size_i_of_set = count_set_in_arr(s1, set);
-	arr = (int *)malloc (size_i_of_set * sizeof (int));
-	i = 0;
-	j = 0;
-	k = 0;
-	while (*(s1 + i) != '\0')
-	{
-		while (*(s1 + i + j) == *(set + j))
-		{
-			if (j == ft_strlen(set))
-				arr[k] = i;
-			j++;
-		}
-		i++;
-	}
-	return (arr);
-}
-
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*new_s;
-	int		*arr_i_set;
-	int		total_new_size;
+	size_t	size;
 	size_t	i;
-	size_t	j;
-	size_t	k;
 
-	arr_i_set = arr_i_in_set(s1, set);
-	total_new_size = ft_strlen(s1) - (count_set_in_arr(s1, set) * ft_strlen(set));
-	new_s = (char *)malloc (total_new_size + 1);
+	size = count_trimmed_str(s1, set);
+	new_s = (char *)ft_calloc(size + 1, sizeof (char));
+	if (!new_s)
+		return (0);
 	i = 0;
-	j = 0;
-	k = 0;
-	while (*(s1 + i) != '\0')
+	while (i < size)
 	{
-		if (i == (size_t)arr_i_set[j])
+		while (*s1 != 0)
 		{
-			i += ft_strlen(set);
-			j++;
-		}
-		else
-		{
-			new_s[k] = s1[i];
-			i++;
-			k++;
+			if (ft_strchr(set, *s1) == 0)
+			{
+				*(new_s + i) = *s1;
+				i++;
+			}
+			s1++;
 		}
 	}
-	free(arr_i_set);
+	*(new_s + i) = 0;
 	return (new_s);
 }
