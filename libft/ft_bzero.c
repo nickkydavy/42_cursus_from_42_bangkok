@@ -6,7 +6,7 @@
 /*   By: pnimwata <pnimwata@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 15:12:49 by pnimwata          #+#    #+#             */
-/*   Updated: 2022/02/17 15:12:49 by pnimwata         ###   ########.fr       */
+/*   Updated: 2022/02/25 15:22:58 by pnimwata         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_bzero(void *s, size_t n)
 
 	i = 0;
 	str = (char *)s;
-	while (*(str + i) != '\0' && i < n)
+	while (i < n)
 	{
 		*(str + i) = 0;
 		i++;
