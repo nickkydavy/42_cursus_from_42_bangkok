@@ -6,7 +6,7 @@
 /*   By: pnimwata <pnimwata@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 15:56:58 by pnimwata          #+#    #+#             */
-/*   Updated: 2022/02/24 14:51:30 by pnimwata         ###   ########.fr       */
+/*   Updated: 2022/02/25 16:17:45 by pnimwata         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,23 @@
 
 size_t	ft_strlcat(char *dest, char const *src, size_t n)
 {
-	size_t	i;
-	size_t	len_dest;
-	size_t	len_src;
+	size_t	len;
 
-	len_dest = ft_strlen(dest);
-	len_src = ft_strlen(src);
-	i = 0;
-	if (n - 1 < len_dest)
-		return (len_src + n);
-	while (len_dest + i < n - 1)
+	len = 0;
+	while (*dest)
 	{
-		dest[len_dest + i] = src[i];
-		i++;
+		dest++;
+		len++;
 	}
-	dest[len_dest + i] = '\0';
-	return (len_dest + i);
+	if (!(len < n))
+		return (ft_strlen(src) + n);
+	while (len < n - 1 && *src)
+	{
+		*dest = *src;
+		dest++;
+		src++;
+		len++;
+	}
+	*dest = '\0';
+	return (len + ft_strlen(src));
 }

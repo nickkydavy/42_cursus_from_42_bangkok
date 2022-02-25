@@ -6,7 +6,7 @@
 /*   By: pnimwata <pnimwata@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/20 12:30:41 by pnimwata          #+#    #+#             */
-/*   Updated: 2022/02/20 12:30:41 by pnimwata         ###   ########.fr       */
+/*   Updated: 2022/02/25 20:59:27 by pnimwata         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		*(new_s + i) = *(s2 + j);
 		i++;
 		j++;
-		if (*(s2 + j) == '\0')
-			*(new_s + i) = 0;
 	}
+	*(new_s + i) = '\0';
 	return (new_s);
 }

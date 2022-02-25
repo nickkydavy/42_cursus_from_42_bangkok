@@ -6,7 +6,7 @@
 /*   By: pnimwata <pnimwata@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/18 14:11:11 by pnimwata          #+#    #+#             */
-/*   Updated: 2022/02/25 13:02:08 by pnimwata         ###   ########.fr       */
+/*   Updated: 2022/02/25 16:44:19 by pnimwata         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,16 +19,23 @@ char	*ft_strnstr(char const *big, char const *little, size_t n)
 	
 	if (*(little) == 0)
 		return ((char *)big);
-	i = -1;
-	j = -1;
-	while (*(big + (++i)) != '\0' && i < n)
+	i = 0;
+	while (*(big + i) && i < n)
 	{
-		while (*(big + i) == *(little + (++j)) && *(little + j) != '\0')
+		j = 0;
+		if (*(big + i) == *(little + j))
 		{
-			i++;
+			while (i + j < n && *(little + j) != '\0')
+			{
+					if (*(big + i + j) == *(little + j))
+					j++;
+				else
+					break;
+			}
 			if (*(little + j) == '\0')
-				return ((char *)big + i); 
+				return ((char *)(big + i));
 		}
+		i++;
 	}
 	return (0);
 }
