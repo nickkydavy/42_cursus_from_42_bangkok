@@ -6,7 +6,7 @@
 /*   By: pnimwata <pnimwata@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/16 19:04:14 by pnimwata          #+#    #+#             */
-/*   Updated: 2022/02/28 14:16:19 by pnimwata         ###   ########.fr       */
+/*   Updated: 2022/02/28 19:05:10 by pnimwata         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 # include <stdlib.h>
 # include <stdio.h>
 
-typedef struct	s_list
+typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;

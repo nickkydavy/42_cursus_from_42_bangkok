@@ -6,7 +6,7 @@
 #    By: pnimwata <pnimwata@student.42bangkok.co    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/16 18:55:54 by pnimwata          #+#    #+#              #
-#    Updated: 2022/02/25 15:25:29 by pnimwata         ###   ########.fr        #
+#    Updated: 2022/02/28 17:22:43 by pnimwata         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,27 +20,26 @@ SRC_FILE := ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
 			ft_itoa.c ft_strmapi.c ft_striteri.c ft_putchar_fd.c ft_putstr_fd.c \
 			ft_putendl_fd.c ft_putnbr_fd.c ft_strncmp.c ft_memchr.c
 BONUS_FILE := $(SRC_FILE) ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c \
-			ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c \
+			ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c
 
-all: mandatory $(NAME)
-
-mandatory:
-	@clear
-	@echo "compile all ft_*.c file to ft_.*o (for Mandatory files)"
-	@gcc -Wall -Werror -Wextra -c $(SRC_FILE) -std=c99
-	@echo "Done!"
-
-bonus:
-	@echo "compile all ft_*.c file to ft_.*o (for Mandatory files)"
-	@gcc -Wall -Werror -Wextra -c $(BONUS_FILE) -std=c99
-	@echo "Done!"
-	$(NAME)
+all: $(NAME)
 
 $(NAME):
+	@clear
+	@echo "compile all mandatory ft_*.c files to ft_.*o"
+	@gcc -Wall -Werror -Wextra -c $(SRC_FILE) -std=c99
+	@echo "Done!"
 	@echo "Convert all ft_*.o to Archive file libft.a"
 	@ar rcs $(NAME) *.o
 	@echo "Done"
 
+bonus:
+	@echo "Compile all bonus ft_*.c files to ft_*.o"
+	@gcc -Wall -Werror -Wextra -c $(BONUS_FILE) -std=c99
+	@echo "Done!"
+	@echo "Convert all ft_*.o to Archive file libft.a"
+	@ar rcs $(NAME) *.o
+	@echo "Done"
 
 clean:
 	@echo "Remove .o files"
@@ -54,4 +53,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: $(NAME) all clean fclean re
+.PHONY: $(NAME) all clean fclean re mandatory bonus $(BONUS_FILE)
