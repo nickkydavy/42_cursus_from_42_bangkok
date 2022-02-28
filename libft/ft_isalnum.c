@@ -6,7 +6,7 @@
 /*   By: pnimwata <pnimwata@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/16 13:57:20 by pnimwata          #+#    #+#             */
-/*   Updated: 2022/02/16 13:57:20 by pnimwata         ###   ########.fr       */
+/*   Updated: 2022/02/28 14:36:18 by pnimwata         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 int	ft_isalnum(int c)
 {
-	return (ft_isalpha(c) || ft_isdigit(c)) ;
+	return (ft_isalpha(c) || ft_isdigit(c));
 }

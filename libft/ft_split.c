@@ -6,12 +6,11 @@
 /*   By: pnimwata <pnimwata@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/20 13:14:49 by pnimwata          #+#    #+#             */
-/*   Updated: 2022/02/26 15:35:21 by pnimwata         ###   ########.fr       */
+/*   Updated: 2022/02/28 14:31:19 by pnimwata         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 char	*arr_split(char const *s, char c)
 {

@@ -6,13 +6,14 @@
 /*   By: pnimwata <pnimwata@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/16 19:04:14 by pnimwata          #+#    #+#             */
-/*   Updated: 2022/02/25 14:25:43 by pnimwata         ###   ########.fr       */
+/*   Updated: 2022/02/28 14:16:19 by pnimwata         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 # include <stdlib.h>
+# include <stdio.h>
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);

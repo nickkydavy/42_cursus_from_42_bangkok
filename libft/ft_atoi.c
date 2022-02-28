@@ -6,7 +6,7 @@
 /*   By: pnimwata <pnimwata@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/18 14:30:10 by pnimwata          #+#    #+#             */
-/*   Updated: 2022/02/25 16:59:00 by pnimwata         ###   ########.fr       */
+/*   Updated: 2022/02/28 14:37:42 by pnimwata         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 int	ft_isspace(char c)
 {
-	if (c >=9 && c <= 13)
+	if (c >= 9 && c <= 13)
 		return (1);
 	return (0);
 }
 
 int	ft_atoi(char const *str)
 {
-	unsigned	int	nbr;
+	unsigned int	nbr;
 	size_t			i;
 	int				p_or_n;
 

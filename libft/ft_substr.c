@@ -6,12 +6,11 @@
 /*   By: pnimwata <pnimwata@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/20 12:25:20 by pnimwata          #+#    #+#             */
-/*   Updated: 2022/02/25 20:56:52 by pnimwata         ###   ########.fr       */
+/*   Updated: 2022/02/28 14:31:34 by pnimwata         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {

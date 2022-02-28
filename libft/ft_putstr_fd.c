@@ -6,7 +6,7 @@
 /*   By: pnimwata <pnimwata@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/24 14:37:17 by pnimwata          #+#    #+#             */
-/*   Updated: 2022/02/24 14:37:17 by pnimwata         ###   ########.fr       */
+/*   Updated: 2022/02/28 14:17:07 by pnimwata         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,9 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	size_t	i;
-
-	i = 0;
-	while (*(s + i) != '\0')
+	while (*s != '\0')
 	{
-		ft_putchar_fd(*(s + i), fd);
-		i++;
+		ft_putchar_fd(*s, fd);
+		s++;
 	}
 }
