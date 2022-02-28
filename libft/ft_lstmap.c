@@ -17,7 +17,7 @@ t_list	*cre_new_lst(t_list *new_lst, void *(*f)(void *), void (*del)(void *), t_
 	t_list	*temp;
 
 	new_lst = ft_lstnew(f(lst->content));
-	if (!temp)
+	if (!new_lst)
 		return (0);
 	temp = new_lst;
 	lst = lst->next;

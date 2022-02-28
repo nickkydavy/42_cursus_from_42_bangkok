@@ -44,7 +44,7 @@ $(NAME):
 
 clean:
 	@echo "Remove .o files"
-	rm -rf $(OBJECT_FILE)
+	rm -rf *.o
 	@echo "Done!"
 
 fclean: clean
