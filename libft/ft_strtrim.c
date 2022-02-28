@@ -25,6 +25,7 @@ size_t	count_trimmed_str(char const *s, char const *set)
 	}
 	return (count);
 }
+
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*new_s;

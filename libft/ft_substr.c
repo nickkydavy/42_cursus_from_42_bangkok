@@ -18,7 +18,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	i;
 	size_t	length;
 
-	
 	length = len;
 	if (start > ft_strlen(s))
 		length = 0;
@@ -28,7 +27,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	i = 0;
 	if (!new_s)
 		return (0);
-	while (i < length) 
+	while (i < length)
 	{
 		*(new_s + i) = *(s + start + i);
 		i++;

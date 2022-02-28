@@ -16,7 +16,7 @@ char	*ft_strnstr(char const *big, char const *little, size_t n)
 {
 	size_t	i;
 	size_t	j;
-	
+
 	if (*(little) == 0)
 		return ((char *)big);
 	i = 0;
@@ -27,10 +27,10 @@ char	*ft_strnstr(char const *big, char const *little, size_t n)
 		{
 			while (i + j < n && *(little + j) != '\0')
 			{
-					if (*(big + i + j) == *(little + j))
+				if (*(big + i + j) == *(little + j))
 					j++;
 				else
-					break;
+					break ;
 			}
 			if (*(little + j) == '\0')
 				return ((char *)(big + i));

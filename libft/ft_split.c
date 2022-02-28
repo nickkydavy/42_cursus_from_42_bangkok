@@ -14,7 +14,7 @@
 
 char	*arr_split(char const *s, char c)
 {
-	char		*arr;
+	char	*arr;
 	int		size;
 
 	size = 0;
@@ -24,7 +24,7 @@ char	*arr_split(char const *s, char c)
 	return (arr);
 }
 
-int		count_arr_to_split(char const *s, char c)
+int	count_arr_to_split(char const *s, char c)
 {
 	int	size;
 
@@ -51,7 +51,7 @@ int		count_arr_to_split(char const *s, char c)
 char	**ft_split(char const *s, char c)
 {
 	char	**new_arr_s;
-	size_t		quan_arr;
+	size_t	quan_arr;
 	size_t	i;
 	size_t	new_arr_i;
 	char	*temp;

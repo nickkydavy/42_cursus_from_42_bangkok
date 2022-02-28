@@ -17,8 +17,10 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	char	*new_s;
 	size_t	i;
 	size_t	j;
+	size_t	size;
 
-	new_s = (char *)malloc ((ft_strlen(s1) + ft_strlen(s2) + 1) * sizeof (char));
+	size = ft_strlen(s1) + ft_strlen(s2);
+	new_s = (char *)malloc ((size + 1) * sizeof (char));
 	i = 0;
 	j = 0;
 	while (*(s1 + j) != '\0')
