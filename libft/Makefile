@@ -6,7 +6,7 @@
 #    By: pnimwata <pnimwata@student.42bangkok.co    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/16 18:55:54 by pnimwata          #+#    #+#              #
-#    Updated: 2022/02/28 17:22:43 by pnimwata         ###   ########.fr        #
+#    Updated: 2022/03/01 15:39:52 by pnimwata         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,6 @@ BONUS_FILE := $(SRC_FILE) ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.
 all: $(NAME)
 
 $(NAME):
-	@clear
 	@echo "compile all mandatory ft_*.c files to ft_.*o"
 	@gcc -Wall -Werror -Wextra -c $(SRC_FILE) -std=c99
 	@echo "Done!"
