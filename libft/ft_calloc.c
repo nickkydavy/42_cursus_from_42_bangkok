@@ -6,7 +6,7 @@
 /*   By: pnimwata <pnimwata@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/18 17:22:28 by pnimwata          #+#    #+#             */
-/*   Updated: 2022/02/28 14:40:08 by pnimwata         ###   ########.fr       */
+/*   Updated: 2022/03/01 19:31:37 by pnimwata         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ void	*ft_calloc(size_t count, size_t size)
 
 	mem = malloc(count * size);
 	i = 0;
-	while (i < count)
+	while (i < count * size)
 	{
-		ft_memset(mem, '\0', size);
+		ft_memset(mem, '\0', count * size);
 		i++;
 	}
 	return (mem);
