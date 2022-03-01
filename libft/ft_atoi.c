@@ -6,7 +6,7 @@
 /*   By: pnimwata <pnimwata@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/18 14:30:10 by pnimwata          #+#    #+#             */
-/*   Updated: 2022/02/28 14:37:42 by pnimwata         ###   ########.fr       */
+/*   Updated: 2022/03/01 16:05:56 by pnimwata         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_isspace(char c)
 {
-	if (c >= 9 && c <= 13)
+	if ((c >= 9 && c <= 13) || c == ' ')
 		return (1);
 	return (0);
 }

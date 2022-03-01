@@ -6,14 +6,14 @@
 /*   By: pnimwata <pnimwata@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/16 19:04:14 by pnimwata          #+#    #+#             */
-/*   Updated: 2022/02/28 19:05:10 by pnimwata         ###   ########.fr       */
+/*   Updated: 2022/03/01 15:40:22 by pnimwata         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 # include <stdlib.h>
-# include <stdio.h>
+# include <unistd.h>
 
 typedef struct s_list
 {

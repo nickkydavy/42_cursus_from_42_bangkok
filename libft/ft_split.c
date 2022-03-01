@@ -6,7 +6,7 @@
 /*   By: pnimwata <pnimwata@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/20 13:14:49 by pnimwata          #+#    #+#             */
-/*   Updated: 2022/02/28 14:31:19 by pnimwata         ###   ########.fr       */
+/*   Updated: 2022/03/01 15:42:58 by pnimwata         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,6 @@ char	**ft_split(char const *s, char c)
 {
 	char	**new_arr_s;
 	size_t	quan_arr;
-	size_t	i;
 	size_t	new_arr_i;
 	char	*temp;
 
@@ -60,7 +59,6 @@ char	**ft_split(char const *s, char c)
 	new_arr_s = (char **)malloc ((quan_arr + 1) * sizeof (char *));
 	if (!new_arr_s)
 		return (0);
-	i = 0;
 	new_arr_i = 0;
 	new_arr_s[quan_arr] = 0;
 	temp = (char *)s;
